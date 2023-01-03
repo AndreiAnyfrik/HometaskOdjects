@@ -1,0 +1,16 @@
+ public class Rectangle extends Figure {
+    double width;
+      double height;
+
+     public Rectangle(double width, double height) {
+         this.width = width;
+         this.height = height;
+     }
+
+     public double getAreaRectangle() {
+         return width * height;
+     }
+     public double getPerimeterRectangle() {
+         return 2 * width * height;
+     }
+     }
