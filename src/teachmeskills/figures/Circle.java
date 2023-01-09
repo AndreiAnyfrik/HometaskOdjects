@@ -1,6 +1,6 @@
 package teachmeskills.figures;
 
-public class Circle extends Figure{
+public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius) {
@@ -15,10 +15,13 @@ public class Circle extends Figure{
         this.radius = radius;
     }
 
-    public  void  getAreaCircle() {
-        this.radius =this.radius * this.radius * Math.PI;
+    public double getArea() {
+        this.radius = this.radius * this.radius * Math.PI;
+        return radius;
     }
-    public void getPerimeterCircle(){
+
+    public double getPerimeter() {
         this.radius = this.radius * 2 * Math.PI;
+        return radius;
     }
 }

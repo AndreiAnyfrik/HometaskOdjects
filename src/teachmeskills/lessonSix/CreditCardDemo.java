@@ -8,7 +8,7 @@ public class CreditCardDemo {
 
         firstcreditCard.addSum(2);
         secondcreditCard.addSum(3);
-        thirdcreditCard.takeSum(3);
+        thirdcreditCard.takeSum(13);
 
         System.out.println(firstcreditCard.getInfo());
         System.out.println(secondcreditCard.getInfo());

@@ -1,46 +1,51 @@
 package teachmeskills.figures;
+/*Написать иерархию классов «Фигуры». Фигура -> Треугольник -> Прямоугольник -> Круг.
+        Реализовать ф-ю подсчета площади для каждого типа фигуры и подсчет периметра.
+        Создать массив из 5 фигур.
+        Вывести на экран сумму периметра всех фигур в массиве.*/
 
 public class Demo {
     public static void main(String[] args) {
-        Figure figure = new Figure();
-        Triangle triangle = new Triangle(2 3)
+        Triangle triangle = new Triangle(1, 2, 3);
         Circle circle = new Circle(1);
-        Rectangle rectangle = new Rectangle(2 3);
+        Rectangle rectangle = new Rectangle(2, 3);
 
-        figure.getAreaFigure();
-        figure.getPerimeterFigure();
-        triangle.getAreaTriangle();
-        triangle.getPerimeterTriangle();
-        circle.getAreaCircle();
-        circle.getPerimeterCircle();
-        rectangle.getAreaRectangle();
-        rectangle.getPerimeterRectangle();
+        triangle.getArea();
+        triangle.getPerimeter();
+        circle.getArea();
+        circle.getPerimeter();
+        rectangle.getArea();
+        rectangle.getPerimeter();
 
         Figure[] array = new Figure[5];
-        array[0] = new Triangle();
-        array[1] = new Circle();
-        array[2] = new Rectangle();
-        array[3] = new Circle();
-        array[4] = new Triangle();
-        for(int i = 0; i < 6; i++){
-            if(i == 0){
-               double areatriangle = Figure[i].getPerimeterCircle();
+        array[0] = new Triangle(1, 3, 3);
+        array[1] = new Circle(2);
+        array[2] = new Rectangle(3, 2);
+        array[3] = new Circle(3);
+        array[4] = new Triangle(2, 3, 4);
+        double areatriangle = 0;
+        double arearectangle = 0;
+        double areacircle = 0;
+        double arearound = 0;
+        double areatriangletwo = 0;
+        for (int i = 0; i < 6; i++) {
+            if (i == 0) {
+                areatriangle = array[i].getPerimeter();
                 System.out.println("Периметр треугольника: " + areatriangle);
-            }else if(i == 1){
-                double  areacircle = Figure[i].getPerimeterRectangle();
+            } else if (i == 1) {
+                areacircle = array[i].getPerimeter();
                 System.out.println("Периметр круга: " + areacircle);
-            }else if(i == 2){
-                double arearectanle = Figure[i].getPerimeterCircle();
-                System.out.println("Периметр прямоугольника: " + rectangle);
-            }else if(i == 3) {
-                double arearound = Figure[i].getPerimeterCircle();
+            } else if (i == 2) {
+                arearectangle = array[i].getPerimeter();
+                System.out.println("Периметр прямоугольника: " + arearectangle);
+            } else if (i == 3) {
+                arearound = array[i].getPerimeter();
                 System.out.println("Периметр круга: " + arearound);
             } else if (i == 4) {
-                double areatriangletwo = Figure[i].getPerimeterCircle();
+                areatriangletwo = array[i].getPerimeter();
                 System.out.println("Периметр треугольника: " + areatriangletwo);
-            }
-        }else if(i == 5){
-                double result = areatriangle + areacircle + arearectanle + arearound + areatriangletwo ;
+            } else if (i == 5) {
+                double result = areatriangle + areacircle + arearectangle + arearound + areatriangletwo;
                 System.out.println("Общий периметр: " + result);
             }
         }

@@ -1,7 +1,8 @@
 package teachmeskills.figures;
 
 public abstract class Figure {
-    public abstract double getPerimeterFigure();
-    public abstract double getAreaFigure();
+    public abstract double getPerimeter();
+
+    public abstract double getArea();
 
 }

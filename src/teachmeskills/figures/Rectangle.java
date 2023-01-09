@@ -26,11 +26,12 @@ public class Rectangle extends Figure {
         this.height = height;
     }
 
-    public void getAreaRectangle() {
+    public double getArea() {
         double area = width * height;
         return area;
     }
-    public void getPerimeterRectangle() {
+
+    public double getPerimeter() {
         double perimeter = 2 * (width * height);
         return perimeter;
     }

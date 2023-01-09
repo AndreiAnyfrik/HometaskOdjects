@@ -35,12 +35,13 @@ public class Triangle extends Figure {
         this.sideC = sideC;
     }
 
-    public double getAreaTriangle() {
+    public double getArea() {
         double p = (sideA + sideB + sideC) / 2; // полупериметр триугольника
         double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC)); // формуга Герона
         return area;
     }
-    public double  getPerimeterTriangle(){
+
+    public double getPerimeter() {
         double perimeter = sideA + sideB + sideC;
         return perimeter;
     }

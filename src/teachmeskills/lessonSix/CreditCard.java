@@ -28,7 +28,11 @@ public class CreditCard {
     }
 
     public void takeSum(double sumToTake) {
-        this.currentSum = this.currentSum - sumToTake;
+        if (sumToTake < this.currentSum) {
+            this.currentSum = this.currentSum - sumToTake;
+        } else {
+            System.out.println("Please add cash to card");
+        }
     }
 
     public String getInfo() {
