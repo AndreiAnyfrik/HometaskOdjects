@@ -23,31 +23,7 @@ public class Demo {
         array[2] = new Rectangle(3, 2);
         array[3] = new Circle(3);
         array[4] = new Triangle(2, 3, 4);
-        double areatriangle = 0;
-        double arearectangle = 0;
-        double areacircle = 0;
-        double arearound = 0;
-        double areatriangletwo = 0;
-        for (int i = 0; i < 6; i++) {
-            if (i == 0) {
-                areatriangle = array[i].getPerimeter();
-                System.out.println("Периметр треугольника: " + areatriangle);
-            } else if (i == 1) {
-                areacircle = array[i].getPerimeter();
-                System.out.println("Периметр круга: " + areacircle);
-            } else if (i == 2) {
-                arearectangle = array[i].getPerimeter();
-                System.out.println("Периметр прямоугольника: " + arearectangle);
-            } else if (i == 3) {
-                arearound = array[i].getPerimeter();
-                System.out.println("Периметр круга: " + arearound);
-            } else if (i == 4) {
-                areatriangletwo = array[i].getPerimeter();
-                System.out.println("Периметр треугольника: " + areatriangletwo);
-            } else if (i == 5) {
-                double result = areatriangle + areacircle + arearectangle + arearound + areatriangletwo;
-                System.out.println("Общий периметр: " + result);
-            }
-        }
+        System.out.println(array[0].getPerimeter() + array[1].getPerimeter() + array[2].getPerimeter()
+                + array[3].getPerimeter() + array[4].getPerimeter());
     }
 }
